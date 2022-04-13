@@ -18,8 +18,7 @@ How to run it:
 -----------------------------------------------
 
 
-API Rate Limiter
-================
+## API Rate Limiter
 
 Languages choices: Golang, Python, Javascript, Java
 
