@@ -1,10 +1,18 @@
-- This was written with java 13 or so but will probably work on java 8.
+This does what HouseCanary asked for, hopefully. It was written in a big hurry.
 
-- This implements a fixed window, not a sliding one. The latter is more "fair", but more overhead. The only way I know to do that is with an array, long[10000] to track 10000 req/interval. Then again this is for the entire service and not a specific user, so maybe it would be better.
+- Written with java 13 or so but will probably work on java 8.
+
+- Implements a *fixed* window, not a *sliding* one. The latter is more "fair", but more overhead: The only way I know to do that is with an array, long[10000] to track 10000 req/interval. Then again this is for the entire service and not a specific user, so maybe it would be worth it to do sliding.
+
+How to run it:
+
+- build.sh just does a build
+- test.sh does a command-line test of the rate limiter (no http parts)
+- web.sh starts up a web server on port 80
 
 
 
-
+Requirements below
 -----------------------------------------------
 
 
