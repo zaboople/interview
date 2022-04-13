@@ -37,7 +37,7 @@ public class WebServer {
             status=200;
         } else {
             response = "{\"wait_ms\": "+waitTime+"}";
-            status=418;
+            status=429;
         }
         t.sendResponseHeaders(status, response.length());
         try (OutputStream os = t.getResponseBody()) {
